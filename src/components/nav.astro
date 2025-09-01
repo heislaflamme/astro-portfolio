@@ -1,0 +1,31 @@
+---
+import Image from "astro/components/Image.astro";
+import home from "../../public/icons8-windows-11.svg";
+import search from "../../public/icons8-search.svg";
+import skills from "../../public/icons8-problem-solving-skills-96.svg";
+import projects from "../../public/chart-decrease-svgrepo-com.svg";
+import about from "../../public/id-card-identification-svgrepo-com.svg";
+import contact from "../../public/message-svgrepo-com.svg"
+---
+<nav class="fixed w-full h-[50px] bottom-0 p-[6px]">
+
+     <div class="flex gap-2 items-center justify-center h-full m-auto">
+
+        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={home} width={35} loading="eager" alt="windows home icon"/></a>
+
+        <div class="win-search flex items-center justify-center rounded-2xl w-25 h-[30px] text-center text-white">
+            <Image src={search} loading="eager" width={17} alt="search icon" class="ml-2"/>
+              <p class="mx-2 text-[12px]">Search</p>
+        </div>
+
+        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={skills} width={35} loading="eager" alt="windows home icon"/></a>
+
+        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={projects} width={35} loading="eager" alt="windows home icon"/></a>
+
+        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={about} width={35} loading="eager" alt="windows home icon"/></a>
+
+        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={contact} width={35} loading="eager" alt="windows home icon"/></a>
+
+     </div>
+     
+</nav>

@@ -1,11 +1,12 @@
 ---
 import "../styles/global.css";
+import Nav from "../components/nav.astro";
 ---
 
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="icon" type="image/svg+xml" href="/man.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <!-- Primary Meta Tags -->
@@ -37,6 +38,7 @@ import "../styles/global.css";
     <meta name="theme-color" content="#0f172a" />
   </head>
   <body>
+    <Nav/>
     <slot />
   </body>
 </html>
