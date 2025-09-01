@@ -1,0 +1,42 @@
+---
+import "../styles/global.css";
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width" />
+    <meta name="generator" content={Astro.generator} />
+    <!-- Primary Meta Tags -->
+    <title>{Astro.props.title}</title>
+    <meta name="title" content="Full-stack Web Developer Portfolio" />
+    <meta name="description" content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria." />
+    <meta
+      name="keywords"
+      content="Web Development, JavaScript, TypeScript, React, Frontend, Backend, Full-stack"
+    />
+    <meta name="author" content="Chidubem Emeka" />
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="{Astro.props.url}" />
+    <meta property="og:title" content="Full-stack Web Developer Portfolio" />
+    <meta property="og:description" content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria." />
+    <meta property="og:image" content="{Astro.props.image}" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="{Astro.props.url}" />
+    <meta property="twitter:title" content="Full-stack Web Developer Portfolio" />
+    <meta property="twitter:description" content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria." />
+    <meta property="twitter:image" content="{Astro.props.image}" />
+
+    <!-- Robots -->
+    <meta name="robots" content="index, follow" />
+    <meta name="theme-color" content="#0f172a" />
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
