@@ -6,6 +6,8 @@ import Nav from "../components/nav.astro";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+    <link href="https://api.fontshare.com/v2/css?f[]=array@400&display=swap" rel="stylesheet">
+    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200&display=swap" rel="stylesheet">
     <link rel="icon" type="image/svg+xml" href="/man.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
@@ -37,7 +39,7 @@ import Nav from "../components/nav.astro";
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0f172a" />
   </head>
-  <body>
+  <body ontouchstart="">
     <Nav/>
     <slot />
   </body>
