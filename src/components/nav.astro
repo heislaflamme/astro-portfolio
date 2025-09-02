@@ -9,49 +9,53 @@ import contact from "../../public/message-svgrepo-com.svg";
 import wifi from "../../public/wifi.svg";
 import volume from "../../public/speaker-filled-audio-tool.svg";
 import battery from "../../public/half-battery.svg";
-import cellular from "../../public/cellular-svgrepo-com.svg"
+import cellular from "../../public/cellular-svgrepo-com.svg";
+import power from "../../public/charging.png"
 ---
+<!-- ios top bar -->
 <div class="flex relative min-lg:hidden">
 
+   <!-- ios nudge -->
 <div class="relative top-0 bg-black h-[4vh] rounded-b-2xl  w-[30vw] m-auto"></div>
-
-<div class="absolute top-0 left-0 mx-[2vw] mt-[1vw] text-white w-[15vw] text-[0.8rem]">
+   <!--ios time -->
+<div class="absolute top-0 left-0 ml-[8vw] mt-[1vw] text-white w-[15vw] text-[0.8rem]">
  { new Date().toLocaleTimeString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true})}
 </div>
-
-<div class="flex absolute gap-1 mx-[2vw] mt-[1vw] top-0 right-0 w-[15vw] text-[0.8rem]">
-   <Image src={cellular} loading="eager" width={17} alt="search icon" class="ml-2"/>
+   <!--cellular and battery -->
+<div class="flex absolute gap-1 mr-[8vw] mt-[1vw] top-0 right-0 w-[15vw] text-[0.8rem]">
+   <Image src={cellular} loading="eager" width={17} alt="cellular" class="ml-2"/>
    <p class="text-white">LTE</p>
-   <Image src={battery} loading="eager" width={17} alt="search icon" class="ml-2"/>
+   <Image src={power} loading="eager" width={20} alt="battery" quality={10} class="ml-2"/>
 </div>
 
 </div>
 
+<!--responsive navbar windows/ios -->
 <nav class="flex fixed w-full justify-center h-[50px] bottom-0 p-[6px]">
 
      <div class="flex gap-2 items-center justify-center h-full m-auto max-lg:hidden">
-        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={home} width={35} loading="eager" alt="windows home icon"/></a>
+
+         <!-- windows taskbar and icons -->
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={home} width={35} loading="eager" alt="windows home icon"/></button>
 
         <div class="win-search flex items-center justify-center rounded-2xl w-25 h-[30px] text-center text-white">
             <Image src={search} loading="eager" width={17} alt="search icon" class="ml-2"/>
               <p class="mx-2 text-[12px]">Search</p>
         </div>
 
-        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={skills} width={35} loading="eager" alt="windows home icon"/></a>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={skills} width={35} loading="eager" alt="windows home icon"/></button>
 
-        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={projects} width={35} loading="eager" alt="windows home icon"/></a>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={projects} width={35} loading="eager" alt="windows home icon"/></button>
 
-        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={about} width={35} loading="eager" alt="windows home icon"/></a>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={about} width={35} loading="eager" alt="windows home icon"/></button>
 
-        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image src={contact} width={35} loading="eager" alt="windows home icon"/></a>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={contact} width={35} loading="eager" alt="windows home icon"/></button>
      
-     
-
-     <div class="flex gap-5 items-center absolute right-[2%]">
+        <div class="flex gap-5 items-center absolute right-[2%]">
         <div class="flex gap-2">
-         <Image src={wifi} width={16} height={16} class="" alt="icons"/>
-         <Image src={volume} width={16} height={16} class="" alt="icons"/>
-         <Image src={battery} width={16} height={16} class="" alt="icons"/>
+         <Image src={wifi} width={16} height={16} class="" alt="wifi icon"/>
+         <Image src={volume} width={16} height={16} class="" alt="volume icon"/>
+         <Image src={battery} width={16} height={16} class="" alt="battery icon"/>
         </div>
 
         <div class="text-[11px] text-white">
@@ -60,6 +64,17 @@ import cellular from "../../public/cellular-svgrepo-com.svg"
          { new Date().toLocaleDateString('en-GB') }
         </div>
      </div>
-
      </div>
+
+      <!--ios taskbar or whatever tf it's called and icons -->
+         <div class="flex justify-around w-full items-center lg:hidden">
+         <button class="w-12 h-10 flex items-center justify-center"><Image src={skills} width={35} loading="eager" alt="windows home icon"/></button>
+
+        <button class="w-12 h-10 flex items-center justify-center"><Image src={projects} width={35} loading="eager" alt="windows home icon"/></button>
+
+        <button class="w-12 h-10 flex items-center justify-center"><Image src={about} width={35} loading="eager" alt="windows home icon"/></button>
+
+        <button class="w-12 h-10 flex items-center justify-center"><Image src={contact} width={35} loading="eager" alt="windows home icon"/></button>
+     
+         </div>
 </nav>
