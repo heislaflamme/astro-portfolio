@@ -31,6 +31,11 @@ import power from "../../public/charging.png"
 </div>
 
 <!--responsive navbar windows/ios -->
+<div class="ios-search flex text-white min-lg:hidden rounded-2xl z-20 px-2 py-1 w-fit absolute bottom-[18dvh] left-1/2 -translate-x-1/2">
+   <Image src={search} loading="eager" width={17} alt="search icon"/>
+   <p class="mx-2 text-[12px]">Search</p>
+</div>
+
 <nav class="flex fixed w-full justify-center h-[8dvh] bottom-0 p-[6px] z-20">
 
      <div class="flex gap-2 items-center justify-center h-full m-auto max-lg:hidden">
@@ -40,7 +45,7 @@ import power from "../../public/charging.png"
 
         <div class="win-search flex items-center justify-center rounded-2xl w-25 h-[30px] text-center text-white">
             <Image src={search} loading="eager" width={17} alt="search icon" class="ml-2"/>
-              <p class="mx-2 text-[12px]">Search</p>
+            <p class="mx-2 text-[12px]">Search</p>
         </div>
 
         <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={skills} width={35} loading="eager" alt="windows home icon"/></button>
