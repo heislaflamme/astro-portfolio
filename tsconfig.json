@@ -5,11 +5,7 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react-jsx",
-    "jsxImportSource": "react",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["src/*"]
-    }
+    "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/strict",
   "include": [
@@ -21,4 +17,3 @@
     "node_modules"
   ]
 }
-
