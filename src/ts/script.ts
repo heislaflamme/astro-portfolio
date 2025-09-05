@@ -110,5 +110,35 @@ document.addEventListener('DOMContentLoaded', () => {
 
   }
   });
+  //ios apps
+  let iosApps = document.querySelectorAll('.icon');
+
+  iosApps.forEach((iosApp, i) => {
+    let app =  document.getElementById(`app${i}`);
+    if (app){
+
+    iosApp.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    const wasHidden = app.classList.contains('hidden'); 
+    closeAll();
+    if (wasHidden) {
+    app.classList.remove('hidden');  
+    } 
+});
+
+    document.addEventListener('click', (e) => {
+    if (!app?.classList.contains('hidden')) { 
+      if (e.target !== app && e.target !== iosApp && iosApp) {
+        app?.classList.add('hidden');
+      }
+    }
+  });
+
+  app?.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  }
+  });
 
 });
