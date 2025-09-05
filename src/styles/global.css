@@ -1,5 +1,6 @@
 @import "tailwindcss";
 
+
 html,body {
      background-color: #252423;
     background-image: url("/Sprinkle.svg");
@@ -9,6 +10,7 @@ html,body {
     overflow: hidden;
     scroll-behavior: smooth;
     height: 100%;
+     box-sizing: border-box;
     will-change: background-position;
 }
 p{
@@ -32,6 +34,8 @@ p{
 /*Navbar*/
 nav{
     background-color: rgb(38, 34, 30);
+    width: calc(100% + env(scrollbar-inline-size, 15px));
+    margin-right: calc(-1 * env(scrollbar-inline-size, -15px));
 }
 
 /* Navbar items */
