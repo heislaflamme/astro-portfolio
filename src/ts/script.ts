@@ -7,13 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const search = document.getElementById('search');
     const appIcons = document.querySelectorAll('.win-home');
    
-    search?.classList.add('hidden');
+    search?.classList.add('hide');
     searchBtn?.classList.remove('bg-blue-500');
     searchBtn?.classList.add('win-search');
 
     
     appIcons.forEach((icon, i) => {
-      document.getElementById(`app${i}`)?.classList.add('hidden');
+      document.getElementById(`app${i}`)?.classList.add('hide');
       icon.classList.remove('bg');
     });
   }
@@ -26,10 +26,10 @@ document.addEventListener('DOMContentLoaded', () => {
   searchBtn?.addEventListener('click', (e) => {
     e.stopPropagation(); 
      e.stopPropagation(); 
-    const wasHidden = search?.classList.contains('hidden');
+    const wasHidden = search?.classList.contains('hide');
     closeAll();
     if (wasHidden) {
-    search?.classList.remove('hidden');
+    search?.classList.remove('hide');
     searchBtn.classList.remove('win-search');
     searchBtn.classList.add('bg-blue-500');
     }
@@ -37,9 +37,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   document.addEventListener('click', (e) => {
-    if (!search?.classList.contains('hidden')) { 
+    if (!search?.classList.contains('hide')) { 
       if (e.target !== search && e.target !== searchBtn && searchBtn) {
-        search?.classList.add('hidden');
+        search?.classList.add('hide');
         searchBtn.classList.remove('bg-blue-500');
         searchBtn.classList.add('win-search');
       }
@@ -85,10 +85,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     icon.addEventListener('click', (e) => {
     e.stopPropagation(); 
-    const wasHidden = app.classList.contains('hidden'); 
+    const wasHidden = app.classList.contains('hide'); 
     closeAll();
     if (wasHidden) {
-    app.classList.remove('hidden');
+    app.classList.remove('hide');
     icon.classList.add('bg');  
     } else {
     icon.classList.remove('bg'); 
@@ -96,9 +96,9 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
     document.addEventListener('click', (e) => {
-    if (!app?.classList.contains('hidden')) { 
+    if (!app?.classList.contains('hide')) { 
       if (e.target !== app && e.target !== icon && icon) {
-        app?.classList.add('hidden');
+        app?.classList.add('hide');
         icon.classList.remove('bg');
       }
     }
@@ -119,17 +119,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
     iosApp.addEventListener('click', (e) => {
     e.stopPropagation(); 
-    const wasHidden = app.classList.contains('hidden'); 
+    const wasHidden = app.classList.contains('hide'); 
     closeAll();
     if (wasHidden) {
-    app.classList.remove('hidden');  
+    app.classList.remove('hide');  
     } 
 });
 
     document.addEventListener('click', (e) => {
-    if (!app?.classList.contains('hidden')) { 
+    if (!app?.classList.contains('hide')) { 
       if (e.target !== app && e.target !== iosApp && iosApp) {
-        app?.classList.add('hidden');
+        app?.classList.add('hide');
       }
     }
   });

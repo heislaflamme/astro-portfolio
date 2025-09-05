@@ -39,7 +39,8 @@ import Nav from "../components/nav.astro";
     <meta name="robots" content="index, follow" />
     <meta name="theme-color" content="#0f172a" />
   </head>
-  <body ontouchstart="">
+  <body ontouchstart="" class="relative">
+    <div class="backdrop hidden absolute w-full h-full z-40"></div>
     <Nav/>
     <slot />
   </body>
