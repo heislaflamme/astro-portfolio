@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //as the bomboclatt name suggests
   function closeAll() {
     const searchBtn = document.getElementById('searchBtn');
+    const searchBtnIos = document.getElementById('searchBtnIos');
     const search = document.getElementById('search');
     const appIcons = document.querySelectorAll('.win-home');
    
@@ -139,6 +140,34 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   }
+  });
+  //IOS search
+  const searchBtnIos = document.getElementById('searchBtnIos');
+
+  
+  searchBtnIos?.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+     e.stopPropagation(); 
+    const wasHidden = search?.classList.contains('hide');
+    closeAll();
+    if (wasHidden) {
+    search?.classList.remove('hide');
+    searchBtnIos.classList.remove('win-search');
+    searchBtnIos.classList.add('bg-blue-500');
+    }
+  });
+
+
+  document.addEventListener('click', (e) => {
+    if (!search?.classList.contains('hide')) { 
+      if (e.target !== search && e.target !== searchBtnIos && searchBtnIos) {
+        search?.classList.add('hide');
+      }
+    }
+  });
+
+  search?.addEventListener('click', (e) => {
+    e.stopPropagation();
   });
 
 });
