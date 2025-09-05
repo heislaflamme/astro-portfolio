@@ -1,0 +1,114 @@
+
+//windows taskbar apps
+document.addEventListener('DOMContentLoaded', () => {
+  //as the bomboclatt name suggests
+  function closeAll() {
+    const searchBtn = document.getElementById('searchBtn');
+    const search = document.getElementById('search');
+    const appIcons = document.querySelectorAll('.win-home');
+   
+    search?.classList.add('hidden');
+    searchBtn?.classList.remove('bg-blue-500');
+    searchBtn?.classList.add('win-search');
+
+    
+    appIcons.forEach((icon, i) => {
+      document.getElementById(`app${i}`)?.classList.add('hidden');
+      icon.classList.remove('bg');
+    });
+  }
+
+  //windows search 
+  const searchBtn = document.getElementById('searchBtn');
+  const search = document.getElementById('search');
+
+  
+  searchBtn?.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+     e.stopPropagation(); 
+    const wasHidden = search?.classList.contains('hidden');
+    closeAll();
+    if (wasHidden) {
+    search?.classList.remove('hidden');
+    searchBtn.classList.remove('win-search');
+    searchBtn.classList.add('bg-blue-500');
+    }
+  });
+
+
+  document.addEventListener('click', (e) => {
+    if (!search?.classList.contains('hidden')) { 
+      if (e.target !== search && e.target !== searchBtn && searchBtn) {
+        search?.classList.add('hidden');
+        searchBtn.classList.remove('bg-blue-500');
+        searchBtn.classList.add('win-search');
+      }
+    }
+  });
+
+  search?.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  searchBtn?.addEventListener("mousedown", (e) => {
+    e.stopPropagation();
+    document.getElementById("search-svg")?.classList.remove("scale-[1]");
+    document.getElementById("search-svg")?.classList.add("scale-[0.75]");
+  });
+
+  searchBtn?.addEventListener("mouseup", (e) => {
+    e.stopPropagation();
+    document.getElementById("search-svg")?.classList.remove("scale-[0.75]");
+    document.getElementById("search-svg")?.classList.add("scale-[1]");
+  });
+
+  //other windows icons
+ document.querySelectorAll(".win-home").forEach((btn, i) => {
+    btn.addEventListener("mousedown", (e) => {
+    e.stopPropagation();
+    document.getElementById(`icon-svg${i}`)?.classList.remove("scale-[1]");
+    document.getElementById(`icon-svg${i}`)?.classList.add("scale-[0.75]");
+  });
+
+  btn.addEventListener("mouseup", (e) => {
+    e.stopPropagation();
+    document.getElementById(`icon-svg${i}`)?.classList.remove("scale-[0.75]");
+    document.getElementById(`icon-svg${i}`)?.classList.add("scale-[1]");
+  });
+ });
+
+  let appIcon = document.querySelectorAll('.win-home');
+
+  appIcon.forEach((icon, i) => {
+    let app =  document.getElementById(`app${i}`);
+    if (app){
+
+    icon.addEventListener('click', (e) => {
+    e.stopPropagation(); 
+    const wasHidden = app.classList.contains('hidden'); 
+    closeAll();
+    if (wasHidden) {
+    app.classList.remove('hidden');
+    icon.classList.add('bg');  
+    } else {
+    icon.classList.remove('bg'); 
+  }
+});
+
+    document.addEventListener('click', (e) => {
+    if (!app?.classList.contains('hidden')) { 
+      if (e.target !== app && e.target !== icon && icon) {
+        app?.classList.add('hidden');
+        icon.classList.remove('bg');
+      }
+    }
+  });
+
+  app?.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
+  }
+  });
+
+});

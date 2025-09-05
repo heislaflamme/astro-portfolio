@@ -2,10 +2,41 @@
 import Layout from '../layouts/layout.astro';
 ---
 <Layout title="Dubem's Portfolio">
+    <!--hero -->
     <div class="flex relative flex-col h-[92dvh] max-lg:h-[80dvh]">
         <header class="hero-header mt-[15dvh] text-[8rem] max-lg:text-[5rem] max-sm:text-[4rem] text-center whitespace-normal break-words">Hi, I'm Chidubem</header>
         <p class="hero-p1 text-center text-[1.5rem] max-md:text-[1.3rem] max-sm:text-[1.25rem] whitespace-normal break-words">A Freelance Full-Stack Web Developer</p>
         <br>
         <p class="hero-p2 text-center text-[1.5rem] max-md:text-[1.3rem] max-sm:text-[1.25rem] whitespace-normal break-words">I turn your ideas into modern, production ready SEO-optimized web applications.</p>
+
+        <!--search -->
+        <div id="search" class="absolute hidden max-lg:hidden left-1/2 -translate-x-1/2 rounded-2xl w-[543px] bottom-5 m-auto h-[543px]">
+        </div>
+        <!--skills -->
+        <div id="app1" class="app absolute hidden bg-amber-200 max-lg:hidden left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        </div>
+        <!--projects -->
+        <div id="app2" class="app absolute hidden bg-purple-300 max-lg:hidden left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        </div>
+        <!--about -->
+        <div id="app3" class="app absolute hidden bg-green-300 max-lg:hidden left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        </div>
+        <!--contact -->
+        <div id="app4" class="app absolute hidden bg-blue-500 max-lg:hidden left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        </div>
     </div>
 </Layout>
+
+<style>
+    #search{
+        background-color: rgba(38, 34, 30, 0.98);
+        box-shadow: 0px 0px 10px rgb(0, 0, 0);
+        }
+    .app{
+        box-shadow: 0px 0px 10px rgb(0, 0, 0);
+        backdrop-filter: blur(30px);
+        }
+    
+</style>
+
+<script src="../ts/script.ts"></script>

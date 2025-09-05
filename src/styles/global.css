@@ -6,7 +6,7 @@ html,body {
     background-repeat: repeat;
     background-size: auto;
     animation: move 4s ease-out forwards;
-    overflow-x: hidden;
+    overflow: hidden;
     scroll-behavior: smooth;
     height: 100%;
     will-change: background-position;
@@ -53,11 +53,14 @@ button{
     background-color: rgb(48, 48, 47);
     cursor: pointer;
 }
+.bg{
+    background-color: rgb(48, 48, 47);
+    border-radius: 5px;
+}
 .ios-search:active{
     background-color: rgb(52, 52, 51);
     cursor: pointer;
 }
-
 /* Animations */
 @keyframes move {
     0% {
@@ -106,6 +109,16 @@ button{
         transform: translateX(0);
     }
 }
+@keyframes enter {
+  from {
+    opacity: 0;
+    transform: scale(0) translateY(100dvh);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
 /* Media queries */
 @media (max-width: 1023px) {
 
@@ -127,7 +140,6 @@ button{
     height: 100%;           
     margin: 0;              
     border: 10px solid black; 
-    overflow-x: hidden;       
 }
     
 

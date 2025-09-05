@@ -31,7 +31,7 @@ import power from "../../public/charging.png"
 </div>
 
 <!--responsive navbar windows/ios -->
-<div class="ios-search flex text-white min-lg:hidden rounded-2xl z-20 px-2 py-1 w-fit absolute bottom-[18dvh] left-1/2 -translate-x-1/2">
+<div class="ios-search flex text-white min-lg:hidden rounded-2xl scale-[1.1] z-20 px-2 py-1 w-fit absolute bottom-[20dvh] left-1/2 -translate-x-1/2">
    <Image src={search} loading="eager" width={17} alt="search icon"/>
    <p class="mx-2 text-[12px]">Search</p>
 </div>
@@ -41,26 +41,26 @@ import power from "../../public/charging.png"
      <div class="flex gap-2 items-center justify-center h-full m-auto max-lg:hidden">
 
          <!-- windows taskbar and icons -->
-        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={home} width={35} loading="eager" alt="windows home icon"/></button>
+        <a href="/" class="win-home w-12 h-10 flex items-center justify-center"><Image id="icon-svg0" class="transition-all duration-200" src={home} width={35} loading="eager" alt="windows home icon"/></a>
 
-        <div class="win-search flex items-center justify-center rounded-2xl w-25 h-[30px] text-center text-white">
-            <Image src={search} loading="eager" width={17} alt="search icon" class="ml-2"/>
+        <button id="searchBtn" class="win-search flex items-center justify-center rounded-2xl w-25 h-[30px] text-center text-white">
+            <Image id="search-svg" src={search} loading="eager" width={17} alt="search icon" class="ml-2 transition-all duration-300"/>
             <p class="mx-2 text-[12px]">Search</p>
-        </div>
+        </button>
 
-        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={skills} width={35} loading="eager" alt="windows home icon"/></button>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image id="icon-svg1" class="transition-all duration-200" src={skills} width={35} loading="eager" alt="windows home icon"/></button>
 
-        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={projects} width={35} loading="eager" alt="windows home icon"/></button>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image id="icon-svg2" class="transition-all duration-200" src={projects} width={35} loading="eager" alt="windows home icon"/></button>
 
-        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={about} width={35} loading="eager" alt="windows home icon"/></button>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image id="icon-svg3" class="transition-all duration-200" src={about} width={35} loading="eager" alt="windows home icon"/></button>
 
-        <button class="win-home w-12 h-10 flex items-center justify-center"><Image src={contact} width={35} loading="eager" alt="windows home icon"/></button>
+        <button class="win-home w-12 h-10 flex items-center justify-center"><Image id="icon-svg4" class="transition-all duration-200" src={contact} width={35} loading="eager" alt="windows home icon"/></button>
      
         <div class="flex gap-5 items-center absolute right-[2%]">
         <div class="flex gap-2">
-         <Image src={wifi} width={16} height={16} class="" alt="wifi icon"/>
-         <Image src={volume} width={16} height={16} class="" alt="volume icon"/>
-         <Image src={battery} width={16} height={16} class="" alt="battery icon"/>
+         <Image src={wifi} width={16} loading="eager" height={16} class="" alt="wifi icon"/>
+         <Image src={volume} width={16} loading="eager" height={16} class="" alt="volume icon"/>
+         <Image src={battery} width={16} loading="eager" height={16} class="" alt="battery icon"/>
         </div>
 
         <div class="text-[11px] text-white">
