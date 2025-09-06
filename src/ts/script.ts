@@ -112,13 +112,13 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   });
   //ios apps
-  const iosApps = document.querySelectorAll('.icon');
-  
-  iosApps.forEach((iosApp, i) => {
+  const iosIcons = document.querySelectorAll('.icon');
+
+  iosIcons.forEach((iosIcon, i) => {
     const app =  document.getElementById(`app${i}`);
     if (app){
 
-    iosApp.addEventListener('click', (e) => {
+    iosIcon.addEventListener('click', (e) => {
     e.stopPropagation(); 
     const wasHidden = app.classList.contains('hide'); 
     closeAll();
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.addEventListener('click', (e) => {
     if (!app?.classList.contains('hide')) { 
-      if (e.target !== app && e.target !== iosApp && iosApp) {
+      if (e.target !== app && e.target !== iosIcon && iosIcon) {
         app?.classList.add('hide');
       }
     }
