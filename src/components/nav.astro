@@ -13,7 +13,7 @@ import cellular from "../../public/cellular-svgrepo-com.svg";
 import power from "../../public/charging.png"
 ---
 <!-- ios top bar -->
-<div class="flex relative min-lg:hidden z-`">
+<div class="flex relative min-lg:hidden z-20">
 
    <!-- ios nudge -->
 <div class="nudge relative top-0 bg-black h-[4dvh] rounded-b-2xl  w-[30dvw] m-auto"></div>
@@ -31,11 +31,11 @@ import power from "../../public/charging.png"
 </div>
 
 <!--responsive navbar windows/ios -->
-{Astro.url.pathname === "/" && <div id="searchBtnIos" class="icon ios-search flex text-white min-lg:hidden rounded-2xl scale-[1.1] z-20 px-2 py-1 w-fit absolute bottom-[20dvh] left-1/2 -translate-x-1/2">
+{Astro.url.pathname === "/" && <div id="searchBtnIos" class="icon ios-search flex text-white min-lg:hidden z-10 rounded-2xl scale-[1.1] px-2 py-1 w-fit absolute bottom-[20dvh] left-1/2 -translate-x-1/2">
    <Image src={search} loading="eager" width={17} alt="search icon"/>
    <p class="mx-2 text-[12px]">Search</p>
 </div>}
-<nav class="flex fixed w-full justify-center h-[8dvh] bottom-0 p-[6px] z-20">
+<nav class="flex fixed w-full justify-center h-[8dvh] bottom-0 p-[6px]">
 
      <div class="flex gap-2 items-center justify-center h-full m-auto max-lg:hidden">
 
