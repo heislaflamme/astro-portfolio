@@ -78,10 +78,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
  });
 
-  let appIcon = document.querySelectorAll('.win-home');
+  const appIcon = document.querySelectorAll('.win-home');
 
   appIcon.forEach((icon, i) => {
-    let app =  document.getElementById(`app${i}`);
+    const app =  document.getElementById(`app${i}`);
     if (app){
 
     icon.addEventListener('click', (e) => {
@@ -112,10 +112,10 @@ document.addEventListener('DOMContentLoaded', () => {
   }
   });
   //ios apps
-  let iosApps = document.querySelectorAll('.icon');
-
+  const iosApps = document.querySelectorAll('.icon');
+  
   iosApps.forEach((iosApp, i) => {
-    let app =  document.getElementById(`app${i}`);
+    const app =  document.getElementById(`app${i}`);
     if (app){
 
     iosApp.addEventListener('click', (e) => {
