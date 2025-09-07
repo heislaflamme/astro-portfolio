@@ -9,8 +9,8 @@ html,body {
     animation: move 4s ease-out forwards;
     overflow: hidden;
     scroll-behavior: smooth;
-    height: 100%;
-     box-sizing: border-box;
+    height: 100dvh;
+    box-sizing: border-box;
     will-change: background-position;
 }
 p{
@@ -66,8 +66,9 @@ button{
     cursor: pointer;
 }
 .backdrop{
-    background-color: rgba(0, 0, 0, 0.596);
+    background-color: rgba(0, 0, 0, 0.87);
 }
+
 .nudge::before{
     content: "";
     background-color: rgb(24, 24, 24);
@@ -106,6 +107,7 @@ button{
     }
    
 }
+
 @keyframes appear {
     0% {
         opacity: 0;

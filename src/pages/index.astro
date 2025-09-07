@@ -1,5 +1,10 @@
 ---
+import Image from 'astro/components/Image.astro';
 import Layout from '../layouts/layout.astro';
+import skills from "../../public/icons8-problem-solving-skills-96.svg";
+import projects from "../../public/chart-decrease-svgrepo-com.svg";
+import about from "../../public/id-card-identification-svgrepo-com.svg";
+import contact from "../../public/message-svgrepo-com.svg";
 ---
 <Layout title="Dubem's Portfolio">
     <!--hero -->
@@ -10,8 +15,33 @@ import Layout from '../layouts/layout.astro';
         <p class="hero-p2 text-center text-[1.5rem] max-md:text-[1.3rem] max-sm:text-[1.25rem] whitespace-normal break-words">I turn your ideas into modern, production ready SEO-optimized web applications.</p>
 
         <!--search -->
-        <div id="search" class="absolute z-20 hide max-lg:-translate-y-[15dvh] max-lg:top-0 max-lg:bottom-0 max-lg:h-[40dvh] max-lg:w-[90dvw] left-1/2 -translate-x-1/2 rounded-2xl w-[543px] bottom-5 m-auto h-[543px]">
+        <div id="search" class="absolute z-20 hide max-lg:-translate-y-[15dvh] max-lg:top-0  max-lg:bottom-0 max-lg:h-[40dvh] max-lg:w-[90dvw] left-1/2 -translate-x-1/2 rounded-2xl w-[543px] bottom-5 m-auto h-[543px]">
+            <input type="text" id="input" placeholder="Search" class="p-2 rounded-lg min-lg:top-0 min-lg:border-0 border min-lg:w-[500px] border-gray-300 absolute max-lg:bottom-0 left-1/2 -translate-x-1/2 translate-y-[10dvh]  max-lg:w-[90dvw] bg-black text-white"/>
+            <div class="flex justify-center align-middle h-full gap-2 w-full">
+
+                <div class="h-full flex flex-col align-middle w-[20%]">
+                <Image src={projects} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
+                <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">Projects</p>
+                </div>
+
+                <div class="h-full flex flex-col align-middle w-[20%]">
+                <Image src={about} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
+                <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">About Me</p>
+                </div>
+                
+                <div class="h-full flex flex-col align-middle w-[20%]">
+                <Image src={contact} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
+                <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">Contact Info</p>
+                </div>
+                
+                <div class="h-full flex flex-col align-middle w-[20%]">
+                    <Image src={skills} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
+                    <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">tools and skills</p>
+                </div>
+
+            </div>
         </div>
+
         <!--skills -->
         <div id="app1" class="app absolute hide max-lg:bg-amber-300 bg-amber-200 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
         </div>
@@ -42,7 +72,13 @@ import Layout from '../layouts/layout.astro';
         transition: opacity 300ms ease;
         pointer-events: none;
     }
-    
+    .s-icons{
+        background-color: rgba(94, 94, 91, 0.562);
+        border-radius: 7px;
+    }
+    .s-icons:hover{
+        background-color: rgba(68, 68, 67, 0.562);
+    }
     @media (max-width: 1023px) {
         #search{
            background-color: rgba(75, 73, 73, 0.966);
@@ -57,4 +93,26 @@ import Layout from '../layouts/layout.astro';
     }
 </style>
 
-<script src="../ts/script.ts"></script>
+<script>
+    //my windows search
+  document.addEventListener("DOMContentLoaded", () => {
+    const input = document.getElementById("input") as HTMLInputElement;
+    const apps = document.querySelectorAll("#search .flex > div"); // each app container
+
+      input.addEventListener("input", () => {
+      const query = input.value.toLowerCase();
+
+      apps.forEach(app => {
+        const p = app.querySelector("p");
+        const label = p && p.textContent ? p.textContent.toLowerCase() : "";
+
+        if (label.startsWith(query) || query === "") {
+          (app as HTMLElement).style.display = "flex"; // keep layout
+        } else {
+          (app as HTMLElement).style.display = "none"; // hide unmatched
+        }
+      });
+    });
+  });
+</script>
+

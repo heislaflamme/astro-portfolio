@@ -40,8 +40,9 @@ import Nav from "../components/nav.astro";
     <meta name="theme-color" content="#0f172a" />
   </head>
   <body ontouchstart="" class="relative">
-    <div id="backdrop" class="backdrop z-10 hidden absolute w-full h-full"></div>
+    <div id="backdrop" class="backdrop z-20 hidden absolute w-full h-full"></div>
     <Nav/>
     <slot />
+    <script src="../ts/script.ts"></script>
   </body>
 </html>

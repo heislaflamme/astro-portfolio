@@ -4,8 +4,6 @@
     "target": "es2022",
     "strict": true,
     "forceConsistentCasingInFileNames": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react"
   },
   "extends": "astro/tsconfigs/strict",
   "include": [

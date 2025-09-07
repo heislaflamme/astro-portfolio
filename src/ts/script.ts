@@ -114,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
   //ios apps
   const iosIcons = document.querySelectorAll('.icon');
   const backdrop = document.getElementById('backdrop');
+  const input = document.getElementById('input');
 
   iosIcons.forEach((iosIcon, i) => {
     const app =  document.getElementById(`app${i}`);
@@ -157,6 +158,7 @@ document.addEventListener('DOMContentLoaded', () => {
     e.stopPropagation(); 
     const wasHidden = search?.classList.contains('hide');
     closeAll();
+    backdrop?.classList.add('hidden');
     if (wasHidden) {
     search?.classList.remove('hide');
     backdrop?.classList.remove('hidden');
