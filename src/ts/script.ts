@@ -19,6 +19,15 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+//exit button
+  const exitBtns = document.getElementsByClassName("exit");
+  for(let i = 0; i < exitBtns.length; i++){
+    exitBtns[i].addEventListener('click', () => {
+      closeAll();
+       document.getElementById('backdrop')?.classList.add('hidden');
+    })
+  }
+  
   //windows search 
   const searchBtn = document.getElementById('searchBtn');
   const search = document.getElementById('search');
@@ -165,15 +174,34 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  //Logic for opening by search
+  const searches = document.getElementsByClassName("s-icons");
+ 
+  for(let i = 0; i < searches.length; i++){
+    searches[i].addEventListener('click', (e) => {
+      e.stopPropagation();
+      if(e.target === searches[i] && !search?.classList.contains('hide')){
+        search?.classList.add('hide');
+        backdrop?.classList.add('hidden');
 
+        document.querySelector(`.a${i}`)?.classList.remove('hide');
+        
+
+      }
+    })
+  }
+
+  //logic for closing search
   document.addEventListener('click', (e) => {
     if (!search?.classList.contains('hide')) { 
       if (e.target !== search && e.target !== searchBtnIos && searchBtnIos) {
         search?.classList.add('hide');
         backdrop?.classList.add('hidden');
       }
+
     }
   });
+
 
   search?.addEventListener('click', (e) => {
     e.stopPropagation();

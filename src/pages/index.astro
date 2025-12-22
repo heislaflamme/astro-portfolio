@@ -5,6 +5,7 @@ import skills from "../../public/icons8-problem-solving-skills-96.svg";
 import projects from "../../public/chart-decrease-svgrepo-com.svg";
 import about from "../../public/id-card-identification-svgrepo-com.svg";
 import contact from "../../public/message-svgrepo-com.svg";
+import exit from "../../public/reject.png"
 ---
 <Layout title="Dubem's Portfolio">
     <!--hero -->
@@ -43,16 +44,48 @@ import contact from "../../public/message-svgrepo-com.svg";
         </div>
 
         <!--skills -->
-        <div id="app1" class="app absolute hide max-lg:bg-amber-300 bg-amber-200 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app1" class="app a3 absolute hide p-[5px] max-lg:bg-amber-300 bg-amber-200 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+            <div class="flex">
+                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
+            </button>
+            <h1 class="m-auto">SKILLS</h1>
+            </div>
+
+            <hr>
         </div>
         <!--projects -->
-        <div id="app2" class="app absolute hide max-lg:bg-blue-400 bg-purple-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app2" class="app a0 absolute p-[5px] hide max-lg:bg-blue-400 bg-purple-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+             <div class="flex">
+                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
+            </button>
+            <h1 class="m-auto">PROJECTS</h1>
+            </div>
+
+            <hr>
         </div>
         <!--about -->
-        <div id="app3" class="app absolute hide max-lg:bg-red-500 bg-green-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app3" class="app a1 absolute p-[5px] hide max-lg:bg-red-500 bg-green-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+            <div class="flex">
+                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
+            </button>
+            <h1 class="m-auto">ABOUT</h1>
+            </div>
+
+            <hr>
         </div>
         <!--contact -->
-        <div id="app4" class="app absolute hide max-lg:bg-green-300 bg-blue-500 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app4" class="app a2 absolute p-[5px] hide max-lg:bg-green-300 bg-blue-500 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+             <div class="flex">
+                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
+            </button>
+            <h1 class="m-auto">CONTACT</h1>
+            </div>
+
+            <hr>
         </div>
     </div>
 </Layout>
@@ -76,7 +109,7 @@ import contact from "../../public/message-svgrepo-com.svg";
         background-color: rgba(94, 94, 91, 0.562);
         border-radius: 7px;
     }
-    .s-icons:hover{
+    .s-icons:exit hover{
         background-color: rgba(68, 68, 67, 0.562);
     }
     @media (max-width: 1023px) {
