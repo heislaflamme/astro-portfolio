@@ -37,52 +37,52 @@ import exit from "../../public/reject.png"
                 
                 <div class="h-full flex flex-col align-middle w-[20%]">
                     <Image src={skills} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
-                    <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">tools and skills</p>
+                    <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">tools & skills</p>
                 </div>
 
             </div>
         </div>
 
         <!--skills -->
-        <div id="app1" class="app a3 absolute hide p-[5px] max-lg:bg-amber-300 bg-amber-200 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app1" class="app a3 absolute hide p-[5px] max-lg:bg-amber-300 bg-amber-200 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
             <div class="flex">
-                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <button class="exit max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
                 <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
             </button>
-            <h1 class="m-auto">SKILLS</h1>
+            <h1 class="relative left-1/2 -translate-x-full">SKILLS</h1>
             </div>
 
             <hr>
         </div>
         <!--projects -->
-        <div id="app2" class="app a0 absolute p-[5px] hide max-lg:bg-blue-400 bg-purple-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app2" class="app a0 absolute p-[5px] hide max-lg:bg-blue-400 bg-purple-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
              <div class="flex">
-                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <button class="exit max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
                 <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
             </button>
-            <h1 class="m-auto">PROJECTS</h1>
+            <h1 class="relative left-1/2 -translate-x-full">PROJECTS</h1>
             </div>
 
             <hr>
         </div>
         <!--about -->
-        <div id="app3" class="app a1 absolute p-[5px] hide max-lg:bg-red-500 bg-green-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app3" class="app a1 absolute p-[5px] hide max-lg:bg-red-500 bg-green-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
             <div class="flex">
-                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <button class="exit max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
                 <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
             </button>
-            <h1 class="m-auto">ABOUT</h1>
+            <h1 class="relative left-1/2 -translate-x-full">ABOUT</h1>
             </div>
 
             <hr>
         </div>
         <!--contact -->
-        <div id="app4" class="app a2 absolute p-[5px] hide max-lg:bg-green-300 bg-blue-500 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-10 m-auto h-[500px]">
+        <div id="app4" class="app a2 absolute p-[5px] hide max-lg:bg-green-300 bg-blue-500 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
              <div class="flex">
-                <button class="exit hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
+                <button class="exit max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
                 <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
             </button>
-            <h1 class="m-auto">CONTACT</h1>
+            <h1 class="relative left-1/2 -translate-x-full">CONTACT</h1>
             </div>
 
             <hr>
@@ -109,7 +109,10 @@ import exit from "../../public/reject.png"
         background-color: rgba(94, 94, 91, 0.562);
         border-radius: 7px;
     }
-    .s-icons:exit hover{
+    .s-icons:hover{
+        background-color: rgba(134, 134, 129, 0.562);
+    }
+    .s-icons:exit max-lg:active:bg-red-600 hover{
         background-color: rgba(68, 68, 67, 0.562);
     }
     @media (max-width: 1023px) {
@@ -122,7 +125,9 @@ import exit from "../../public/reject.png"
             height: 95%;
             bottom: 0;
         }
-        
+        .s-icons:active{
+        background-color: rgba(134, 134, 129, 0.562);
+    }
     }
 </style>
 
