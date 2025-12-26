@@ -172,7 +172,6 @@ document.addEventListener("DOMContentLoaded", () => {
       e.stopPropagation();
       if (e.target === searches[i] && !search?.classList.contains("hide")) {
         search?.classList.add("hide");
-        backdrop?.classList.add("hidden");
         search?.classList.add("hide");
         searchBtn?.classList.remove("bg-blue-500");
         searchBtn?.classList.add("win-search");
