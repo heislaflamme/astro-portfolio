@@ -1,147 +1,146 @@
 @import "tailwindcss";
 
-
-html,body {
-     background-color: #252423;
-    background-image: url("/Sprinkle.svg");
-    background-repeat: repeat;
-    background-size: auto;
-    animation: move 4s ease-out forwards;
-    overflow: hidden;
-    scroll-behavior: smooth;
-    height: 100dvh;
-    box-sizing: border-box;
-    will-change: background-position;
+html,
+body {
+  background-color: #252423;
+  background-image: url("/Sprinkle.svg");
+  background-repeat: repeat;
+  background-size: auto;
+  animation: move 4s ease-out forwards;
+  overflow: hidden;
+  scroll-behavior: smooth;
+  height: 100dvh;
+  box-sizing: border-box;
+  will-change: background-position;
 }
-p{
-    font-family: 'General Sans', sans-serif;
+p {
+  font-family: "General Sans", sans-serif;
 }
 /* Hero */
-.hero-header{
-    font-family: 'Array', sans-serif;
-    animation: appear 2s forwards;
-    color: #E08E45;
+.hero-header {
+  font-family: "Array", sans-serif;
+  animation: appear 2s forwards;
+  color: #e08e45;
 }
-.hero-p1{
-    animation: fromLeft 2s ease-out forwards;
-     color: #f8f4a6;
+.hero-p1 {
+  animation: fromLeft 2s ease-out forwards;
+  color: #f8f4a6;
 }
-.hero-p2{
-    animation: fromRight 2s ease-out forwards;
-     color: #f8f4a6;
+.hero-p2 {
+  animation: fromRight 2s ease-out forwards;
+  color: #f8f4a6;
 }
 
 /*Navbar*/
-nav{
-    background-color: rgb(38, 34, 30);
-    width: calc(100% + env(scrollbar-inline-size, 15px));
-    margin-right: calc(-1 * env(scrollbar-inline-size, -15px));
+nav {
+  background-color: rgb(38, 34, 30);
+  width: calc(100% + env(scrollbar-inline-size, 15px));
+  margin-right: calc(-1 * env(scrollbar-inline-size, -15px));
 }
 
 /* Navbar items */
 .win-search {
-    background-color: rgb(48, 48, 47);
-    cursor: pointer;
+  background-color: rgb(48, 48, 47);
+  cursor: pointer;
 }
-button{
-    cursor: pointer;
+button {
+  cursor: pointer;
 }
 .win-search:hover {
-    background-color: rgb(52, 52, 51);
+  background-color: rgb(52, 52, 51);
 }
-.win-home:hover{
-    background-color: rgb(48, 48, 47);
-    border-radius: 5px;
+.win-home:hover {
+  background-color: rgb(48, 48, 47);
+  border-radius: 5px;
 }
-.ios-search{
-    background-color: rgb(48, 48, 47);
-    cursor: pointer;
+.ios-search {
+  background-color: rgb(48, 48, 47);
+  cursor: pointer;
 }
-.bg{
-    background-color: rgb(48, 48, 47);
-    border-radius: 5px;
+.bg {
+  background-color: rgb(48, 48, 47);
+  border-radius: 5px;
 }
-.ios-search:active{
-    background-color: rgb(52, 52, 51);
-    cursor: pointer;
+.ios-search:active {
+  background-color: rgb(52, 52, 51);
+  cursor: pointer;
 }
-.backdrop{
-    background-color: rgba(0, 0, 0, 0.87);
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.87);
 }
 
-.nudge::before{
-    content: "";
-    background-color: rgb(24, 24, 24);
-    width: 20%;
-    height: 15%;
-    z-index: 40;
-    top: 40%;
-    border-radius: 15px;
-    transform: translateY(-50%);
-    left: 50%;
-    transform: translateX(-50%);
-    position: absolute;
+.nudge::before {
+  content: "";
+  background-color: rgb(24, 24, 24);
+  width: 20%;
+  height: 15%;
+  z-index: 40;
+  top: 40%;
+  border-radius: 15px;
+  transform: translateY(-50%);
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
 }
-.nudge::after{
-    content: "";
-    background-color: rgb(26, 25, 25);
-    width: 10px;
-    height: 10px;
-    z-index: 40;
-    top: 40%;
-    border-radius: 15px;
-    transform: translateY(-50%);
-    right: 20%;
-    position: absolute;
+.nudge::after {
+  content: "";
+  background-color: rgb(26, 25, 25);
+  width: 10px;
+  height: 10px;
+  z-index: 40;
+  top: 40%;
+  border-radius: 15px;
+  transform: translateY(-50%);
+  right: 20%;
+  position: absolute;
 }
 /* Animations */
 @keyframes move {
-    0% {
-        background-position: 1000px -1000px;
-    }
-    60%{
-        background-position: -100px 100px;
-    }
-    100% {
-        background-position: 0 0;
-    }
-   
+  0% {
+    background-position: 1000px -1000px;
+  }
+  60% {
+    background-position: -100px 100px;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 @keyframes appear {
-    0% {
-        opacity: 0;
-        transform: scale(0);
-    }
-    80%{
-        transform: scale(1.01);
-    }
-    100% {
-        opacity: 1;
-        transform: scale(1);
-    }
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+  80% {
+    transform: scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 @keyframes fromLeft {
-    0% {
-        transform: translateX(-100dvw);
-    }
-    60%{
-        transform: translate(1dvw);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-100dvw);
+  }
+  60% {
+    transform: translate(1dvw);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes fromRight {
-    0% {
-        transform: translateX(100dvw);
-    }
-    60%{
-        transform: translate(-1dvw);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(100dvw);
+  }
+  60% {
+    transform: translate(-1dvw);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 @keyframes enter {
   from {
@@ -155,26 +154,23 @@ button{
 }
 /* Media queries */
 @media (max-width: 1023px) {
+  nav {
+    width: 90dvw;
+    height: 12dvh;
+    display: flex;
+    position: fixed;
+    bottom: 5dvh;
+    left: 50%;
+    background-color: rgb(48, 44, 41);
+    transform: translateX(-50%);
+    justify-content: center;
+    align-items: center;
+    border-radius: 15px;
+  }
 
-    nav{
-       width: 90dvw; 
-       height: 12dvh;             
-        display: flex;
-        position: fixed;          
-        bottom: 5dvh;               
-        left: 50%;              
-        background-color: rgb(48, 44, 41);   
-        transform: translateX(-50%); 
-        justify-content: center;   
-        align-items: center;       
-        border-radius: 15px;   
-    }
-
-    html {
-    height: 100%;           
-    margin: 0;              
-    border: 10px solid black; 
-}
-    
-
+  html {
+    height: 100%;
+    margin: 0;
+    border: 10px solid black;
+  }
 }

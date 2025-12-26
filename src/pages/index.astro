@@ -1,279 +1,536 @@
 ---
-import Image from 'astro/components/Image.astro';
-import Layout from '../layouts/layout.astro';
+import Image from "astro/components/Image.astro";
+import Layout from "../layouts/layout.astro";
 import skills from "../../public/icons8-problem-solving-skills-96.svg";
 import projects from "../../public/chart-decrease-svgrepo-com.svg";
 import about from "../../public/id-card-identification-svgrepo-com.svg";
 import contact from "../../public/message-svgrepo-com.svg";
 import exit from "../../public/reject.png";
-import html from '../../public/html-5-svgrepo-com.svg';
-import css from '../../public/css-3-svgrepo-com.svg';
-import tailwind from '../../public/tailwind-svgrepo-com.svg';
-import sass from '../../public/sass-svgrepo-com.svg';
-import js from '../../public/js-official-svgrepo-com.svg';
-import ts from '../../public/typescript-icon-svgrepo-com.svg';
-import react from '../../public/react-svgrepo-com.svg';
-import astro from '../../public/astro.svg';
-import express from '../../public/express-svgrepo-com.svg';
-import nest from '../../public/nestjs-svgrepo-com.svg';
-import sql from '../../public/mysql-logo-svgrepo-com.svg';
-import mongodb from '../../public/mongodb-logo-svgrepo-com.svg';
-import nodejs from '../../public/nodejs-svgrepo-com.svg';
-
+import html from "../../public/html-5-svgrepo-com.svg";
+import css from "../../public/css-3-svgrepo-com.svg";
+import tailwind from "../../public/tailwind-svgrepo-com.svg";
+import sass from "../../public/sass-svgrepo-com.svg";
+import js from "../../public/js-official-svgrepo-com.svg";
+import ts from "../../public/typescript-icon-svgrepo-com.svg";
+import react from "../../public/react-svgrepo-com.svg";
+import astro from "../../public/astro.svg";
+import express from "../../public/express-svgrepo-com.svg";
+import nest from "../../public/nestjs-svgrepo-com.svg";
+import sql from "../../public/mysql-logo-svgrepo-com.svg";
+import mongodb from "../../public/mongodb-logo-svgrepo-com.svg";
+import nodejs from "../../public/nodejs-svgrepo-com.svg";
+import me from "../../public/me.webp";
+import telegram from "../../public/telegram.svg";
+import x from "../../public/twitter.svg";
+import linkedin from "../../public/linkedin.svg";
+import gmail from "../../public/gmail.svg";
+import instagram from "../../public/instagram.svg";
+import project1 from "../../public/project1.png";
 ---
+
 <Layout title="Dubem's Portfolio">
-    <!--hero -->
-    <div class="flex relative flex-col h-[92dvh] max-lg:h-[80dvh]">
-        <header class="hero-header mt-[15dvh] text-[8rem] max-lg:text-[5rem] max-sm:text-[4rem] text-center whitespace-normal break-words">Hi, I'm Chidubem</header>
-        <p class="hero-p1 text-center text-[1.5rem] max-md:text-[1.3rem] max-sm:text-[1.25rem] whitespace-normal break-words">A Freelance Full-Stack Web Developer</p>
-        <br>
-        <p class="hero-p2 text-center text-[1.5rem] max-md:text-[1.3rem] max-sm:text-[1.25rem] whitespace-normal break-words">I turn your ideas into modern, production ready SEO-optimized web applications.</p>
+  <!--hero -->
+  <div class="flex relative flex-col h-[92dvh] max-lg:h-[80dvh]">
+    <header
+      class="hero-header mt-[15dvh] text-[8rem] max-lg:text-[5rem] max-sm:text-[4rem] text-center whitespace-normal break-words"
+    >
+      Hi, I'm Chidubem
+    </header>
+    <p
+      class="hero-p1 text-center text-[1.5rem] max-md:text-[1.3rem] max-sm:text-[1.25rem] whitespace-normal break-words"
+    >
+      A Freelance Full-Stack Web Developer
+    </p>
+    <br />
+    <p
+      class="hero-p2 text-center text-[1.5rem] max-md:text-[1.3rem] max-sm:text-[1.25rem] whitespace-normal break-words"
+    >
+      I turn your ideas into modern, production ready SEO-optimized web
+      applications.
+    </p>
 
-        <!--search -->
-        <div id="search" class="absolute z-20 hide max-lg:-translate-y-[15dvh] max-lg:top-0  max-lg:bottom-0 max-lg:h-[40dvh] max-lg:w-[90dvw] left-1/2 -translate-x-1/2 rounded-2xl w-[543px] bottom-5 m-auto h-[543px]">
-            <input type="text" id="input" placeholder="Search" class="p-2 rounded-lg min-lg:top-0 min-lg:border-0 border min-lg:w-[500px] border-gray-300 absolute max-lg:bottom-0 left-1/2 -translate-x-1/2 translate-y-[10dvh]  max-lg:w-[90dvw] bg-black text-white"/>
-            <div class="flex justify-center align-middle h-full gap-2 w-full">
-
-                <div class="h-full flex flex-col align-middle w-[20%]">
-                <Image src={projects} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
-                <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">Projects</p>
-                </div>
-
-                <div class="h-full flex flex-col align-middle w-[20%]">
-                <Image src={about} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
-                <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">About Me</p>
-                </div>
-                
-                <div class="h-full flex flex-col align-middle w-[20%]">
-                <Image src={contact} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
-                <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">Contact Info</p>
-                </div>
-                
-                <div class="h-full flex flex-col align-middle w-[20%]">
-                    <Image src={skills} alt="icon" class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"/>
-                    <p class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center">tools & skills</p>
-                </div>
-
-            </div>
+    <!--search -->
+    <div
+      id="search"
+      class="absolute z-20 hide max-lg:-translate-y-[15dvh] max-lg:top-0 max-lg:bottom-0 max-lg:h-[40dvh] max-lg:w-[90dvw] left-1/2 -translate-x-1/2 rounded-2xl w-[543px] bottom-5 m-auto h-[543px]"
+    >
+      <input
+        type="text"
+        id="input"
+        placeholder="Search"
+        class="p-2 rounded-lg min-lg:top-0 min-lg:border-0 border min-lg:w-[500px] border-gray-300 absolute max-lg:bottom-0 left-1/2 -translate-x-1/2 translate-y-[10dvh] max-lg:w-[90dvw] bg-black text-white"
+      />
+      <div class="flex justify-center align-middle h-full gap-2 w-full">
+        <div class="h-full flex flex-col align-middle w-[20%]">
+          <Image
+            src={projects}
+            alt="icon"
+            class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
+          />
+          <p
+            class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center"
+          >
+            Projects
+          </p>
         </div>
 
-        <!--skills -->
-        <div id="app1" class="app a3 overflow-y-auto absolute hide p-[5px] max-lg:bg-amber-300 bg-amber-200 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
-            <div class="flex">
-                <button class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
-                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
-            </button>
-            <h1 class="relative left-1/2 -translate-x-full">SKILLS</h1>
-            </div>
-
-            <hr>
-            <p class="p-4 font-black">This website was made using Astro to ensure fast load times, better SEO and faster developer experience. <br> <br> Here are my other skills;</p>
-            <div class="skills_grid">
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={html} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">HTML5</h1>
-                </div>
-
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={css} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">CSS</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={tailwind} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">TAILWIND</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={sass} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">SASS</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={js} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">JAVASCRIPT</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={ts} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">TYPESCRIPT</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={react} alt="html" class="skills_ react w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">REACT</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={astro} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">ASTRO</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={nodejs} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">NODEJS</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={sql} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">MYSQL</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={mongodb} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">MONGODB</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={express} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">EXPRESSJS</h1>
-                </div>
-                
-                <div class="flex justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl">
-                    <Image src={nest} alt="html" class="skills_ w-[100px]"/>
-                    <h1 class="relative top-1/2 -translate-y-[10%] text-white">NESTJS</h1>
-                </div>
-
-                
-            </div>
+        <div class="h-full flex flex-col align-middle w-[20%]">
+          <Image
+            src={about}
+            alt="icon"
+            class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
+          />
+          <p
+            class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center"
+          >
+            About Me
+          </p>
         </div>
-        <!--projects -->
-        <div id="app2" class="app a0 absolute p-[5px] hide max-lg:bg-blue-400 bg-purple-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
-             <div class="flex">
-                <button class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
-                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
-            </button>
-            <h1 class="relative left-1/2 -translate-x-full">PROJECTS</h1>
-            </div>
 
-            <hr>
+        <div class="h-full flex flex-col align-middle w-[20%]">
+          <Image
+            src={contact}
+            alt="icon"
+            class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
+          />
+          <p
+            class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center"
+          >
+            Contact Info
+          </p>
         </div>
-        <!--about -->
-        <div id="app3" class="app a1 absolute p-[5px] hide max-lg:bg-red-500 bg-green-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
-            <div class="flex">
-                <button class="exit max-lg:active:bg-red-600 hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
-                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
-            </button>
-            <h1 class="relative left-1/2 -translate-x-full">ABOUT</h1>
-            </div>
 
-            <hr>
+        <div class="h-full flex flex-col align-middle w-[20%]">
+          <Image
+            src={skills}
+            alt="icon"
+            class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
+          />
+          <p
+            class="relative top-[-44%] max-lg:top-[-30%] text-white text-[13px] text-center"
+          >
+            tools & skills
+          </p>
         </div>
-        <!--contact -->
-        <div id="app4" class="app a2 absolute p-[5px] hide max-lg:bg-green-300 bg-blue-500 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]">
-             <div class="flex">
-                <button class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full">
-                <Image src={exit} quality={10} class="w-4 m-auto" alt="exit"/>
-            </button>
-            <h1 class="relative left-1/2 -translate-x-full">CONTACT</h1>
-            </div>
-
-            <hr>
-        </div>
+      </div>
     </div>
+
+    <!--skills -->
+    <div
+      id="app1"
+      class="app a3 overflow-auto absolute hide p-[5px] border-1 max-lg:border-amber-300 border-amber-200 max-lg:bg-amber-300 bg-amber-200 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]"
+    >
+      <div class="flex">
+        <button
+          class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
+        >
+          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+        </button>
+        <h1 class="relative left-1/2 -translate-x-full">SKILLS</h1>
+      </div>
+
+      <hr />
+      <p class="p-4 font-black">
+        This website was made using Astro to ensure fast load times, better SEO
+        and faster developer experience. <br />
+        <br /> Here are my other skills;
+      </p>
+      <div class="skills_grid">
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={html} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">HTML5</h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={css} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">CSS</h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={tailwind} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">
+            TAILWIND
+          </h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={sass} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">SASS</h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={js} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">
+            JAVASCRIPT
+          </h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={ts} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">
+            TYPESCRIPT
+          </h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={react} alt="html" class="skills_ react w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">REACT</h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={astro} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">ASTRO</h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={nodejs} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">NODEJS</h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={sql} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">MYSQL</h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={mongodb} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">
+            MONGODB
+          </h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={express} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">
+            EXPRESSJS
+          </h1>
+        </div>
+
+        <div
+          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
+        >
+          <Image src={nest} alt="html" class="skills_ w-[100px]" />
+          <h1 class="relative top-1/2 -translate-y-[10%] text-white">NESTJS</h1>
+        </div>
+      </div>
+    </div>
+    <!--projects -->
+    <div
+      id="app2"
+      class="app a0 overflow-auto absolute p-[5px] hide max-lg:bg-blue-400 bg-purple-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]"
+    >
+      <div class="flex">
+        <button
+          class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
+        >
+          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+        </button>
+        <h1 class="relative left-1/2 -translate-x-full">PROJECTS</h1>
+      </div>
+
+      <hr />
+
+      <div class="projects m-4">
+        <div
+          class="w-[100%] flex gap-4 drop-shadow-2xl shadow-black bg-white p-2 rounded-2xl"
+        >
+          <a
+            href=""
+            class="w-[40%] rounded-2xl hover:scale-[1.7] z-20 hover:shadow-2xl hover:shadow-black transition-all duration-700 hover:translate-x-[40%] hover:translate-y-[20%]"
+            target="_blank"
+            rel="noopener noreferrer"
+            ><Image src={project1} alt="project" class="rounded-2xl" /></a
+          >
+          <p class="my-auto text-[19px] font-black min-lg:text-[24px]">
+            Basic portfolio site <br />
+            <a
+              href=""
+              class="font-light text-blue-950 hover:text-blue-700"
+              target="_blank"
+              rel="noopener noreferrer">visit page</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--about -->
+    <div
+      id="app3"
+      class="app flex flex-col overflow-auto gap-2 a1 absolute p-[5px] hide max-lg:bg-red-500 bg-green-300 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]"
+    >
+      <div class="flex">
+        <button
+          class="exit max-lg:active:bg-red-600 hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
+        >
+          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+        </button>
+        <h1 class="relative left-1/2 -translate-x-full">ABOUT</h1>
+      </div>
+
+      <hr />
+
+      <div class="flex flex-col gap-2 min-lg:mt-8">
+        <div
+          class="p-2 flex m-auto rounded-2xl w-[60%] max-lg:w-[95%] bg-gray-900"
+        >
+          <Image src={me} alt="me" class="w-20 rounded-full bg-black" />
+          <p class="text-white m-auto">CHIDUBEM PAUL EMEKA-OGBU</p>
+        </div>
+
+        <div
+          class="p-2 flex m-auto rounded-2xl w-[60%] max-lg:w-[95%] bg-gray-900"
+        >
+          <p class="text-white m-auto p-2">
+            I build clean, fast, responsive and SEO-optimized websites, my tech
+            stack includes the latest technologies such as HTML, CSS, Tailwind,
+            SASS, JavaScript, TypeScript, React, Astro, ExpressJS, NestJS, SQL
+            and NOSQL. My website was especially made using Astro, paired with
+            tailwind, css and TypeScript. I am confident in my stack and I use
+            it well. Available for freelance, remote, or on-site web development
+            roles.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!--contact -->
+    <div
+      id="app4"
+      class="app a2 overflow-auto absolute p-[5px] hide max-lg:bg-green-300 bg-blue-500 left-1/2 -translate-x-1/2 rounded-2xl w-[800px] bottom-2 m-auto h-[500px]"
+    >
+      <div class="flex">
+        <button
+          class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
+        >
+          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+        </button>
+        <h1 class="relative left-1/2 -translate-x-full">CONTACT</h1>
+      </div>
+
+      <hr />
+      <h2
+        class="absolute top-[25%] left-1/2 -translate-x-[50%] text-3xl font-extrabold"
+      >
+        FIND ME ON...
+      </h2>
+      <div
+        class="flex gap-3 justify-center mt-[20%] max-lg:mt-[25%] bg-white p-2 mx-4 rounded-2xl"
+      >
+        <a
+          href="https://t.me/heislaflame"
+          class="media w-[15%] min-lg:w-[10%]"
+          target="_blank"
+          rel="noopener noreferrer"><Image src={telegram} alt="social" /></a
+        >
+        <a
+          href="https://x.com/heislaflame?s=11&t=jyaIwNJe-T53So5zipuPRA"
+          class="media w-[15%] min-lg:w-[10%]"
+          target="_blank"
+          rel="noopener noreferrer"><Image src={x} alt="social" /></a
+        >
+        <a
+          href="https://www.linkedin.com/in/emekaogbuchidubem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
+          class="media w-[15%] min-lg:w-[10%]"
+          target="_blank"
+          rel="noopener noreferrer"><Image src={linkedin} alt="social" /></a
+        >
+        <a
+          href="mailto:emekaogbuchidubem@gmail.com"
+          class="media w-[15%] min-lg:w-[10%]"
+          target="_blank"
+          rel="noopener noreferrer"><Image src={gmail} alt="social" /></a
+        >
+        <a
+          href="https://www.instagram.com/heislaflame?igsh=MWh1NWUzOWxnMWRndg%3D%3D&utm_source=qr"
+          class="media w-[15%] min-lg:w-[10%]"
+          target="_blank"
+          rel="noopener noreferrer"><Image src={instagram} alt="social" /></a
+        >
+      </div>
+      <div
+        class="contra-hire-me-button flex justify-center mt-2"
+        data-analyticsUserId="c88cfc24-7ef4-45b9-b8ac-df85bb094d65"
+        data-theme="light"
+        data-username="emeka_chidubem_i7fb5yis"
+      >
+      </div><script
+        async
+        src="https://contra.com/static/embed/sdk.js"
+        charset="utf-8"></script>
+    </div>
+  </div>
 </Layout>
 
 <style>
-    #search{
-        background-color: rgba(38, 34, 30, 0.98);
-        box-shadow: 0px 0px 10px rgb(0, 0, 0);
-        }
-    .app{
-        box-shadow: 0px 0px 10px rgb(0, 0, 0);
-        backdrop-filter: blur(30px);
-        z-index: 20;
-        }
-    .hide{
-        opacity: 0;
-        transition: opacity 300ms ease;
-        pointer-events: none; 
-    }
-    .skills_{
-        animation: float 10s infinite;
-    }
-    .s-icons{
-        background-color: rgba(94, 94, 91, 0.562);
-        border-radius: 7px;
-    }
-    .s-icons:hover{
-        background-color: rgba(134, 134, 129, 0.562);
-    }
-    .s-icons:exit max-lg:active:bg-red-600 hover{
-        background-color: rgba(68, 68, 67, 0.562);
-    }
-    .skills_grid{
-        justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(auto-fit, 300px );
-    }
-    .react{
-        animation: spin 2s infinite;
-    }
-    @keyframes float {
-
-        0% {
-            transform: translateY(0);
-        }
-
-        50%{
-            transform: translateY(10px);
-        }
-
-        100%{
-            transform: translateY(0);
-        }
-        
+  #search {
+    background-color: rgba(38, 34, 30, 0.98);
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+  }
+  .app {
+    box-shadow: 0px 0px 10px rgb(0, 0, 0);
+    backdrop-filter: blur(30px);
+    z-index: 20;
+  }
+  .hide {
+    opacity: 0;
+    transition: opacity 300ms ease;
+    pointer-events: none;
+  }
+  .skills_ {
+    animation: float 3s infinite;
+  }
+  .s-icons {
+    background-color: rgba(94, 94, 91, 0.562);
+    border-radius: 7px;
+  }
+  .s-icons:hover {
+    background-color: rgba(134, 134, 129, 0.562);
+  }
+  .media:hover {
+    animation: hover 500ms forwards;
+  }
+  .s-icons:exit max-lg:active:bg-red-600 hover {
+    background-color: rgba(68, 68, 67, 0.562);
+  }
+  .skills_grid {
+    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 300px);
+  }
+  .react {
+    animation: spin 2s infinite;
+  }
+  .contra-hire-me-button:hover {
+    animation: scale 10ms forwards;
+  }
+  @keyframes float {
+    0% {
+      transform: translateY(0);
     }
 
-    @keyframes spin {
-        0% {
-            transform: rotate(0);
-        }
+    50% {
+      transform: translateY(10px);
+    }
 
-        80% {
-            transform: rotate(400deg);
-        }
+    100% {
+      transform: translateY(0);
+    }
+  }
 
-        100% {
-            transform: rotate(360deg);
-        }
+  @keyframes spin {
+    0% {
+      transform: rotate(0);
     }
-    @media (max-width: 1023px) {
-        #search{
-           background-color: rgba(75, 73, 73, 0.966);
-           box-shadow: none;
-        }
-        .app{
-            width: 90%;
-            height: 95%;
-            bottom: 0;
-        }
-        .s-icons:active{
-        background-color: rgba(134, 134, 129, 0.562);
+
+    80% {
+      transform: rotate(400deg);
     }
+
+    100% {
+      transform: rotate(360deg);
     }
+  }
+  @keyframes scale {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.02);
+    }
+  }
+  @keyframes hover {
+    from {
+      transform: translateY(0px);
+    }
+
+    to {
+      transform: translateY(-10px);
+    }
+  }
+  @media (max-width: 1023px) {
+    #search {
+      background-color: rgba(75, 73, 73, 0.966);
+      box-shadow: none;
+    }
+    .app {
+      width: 90%;
+      height: 95%;
+      bottom: 0;
+    }
+    .s-icons:active {
+      background-color: rgba(134, 134, 129, 0.562);
+    }
+  }
 </style>
 
 <script>
-    //my windows search
+  //my windows search
   document.addEventListener("DOMContentLoaded", () => {
     const input = document.getElementById("input") as HTMLInputElement;
     const apps = document.querySelectorAll("#search .flex > div"); // each app container
 
-      input.addEventListener("input", () => {
-      const query = input.value.toLowerCase();
+    input.addEventListener("input", () => {
+      const query = input.value.toLowerCase().trim();
 
-      apps.forEach(app => {
+      apps.forEach((app) => {
         const p = app.querySelector("p");
-        const label = p && p.textContent ? p.textContent.toLowerCase() : "";
+        const label =
+          p && p.textContent ? p.textContent.toLowerCase().trim() : "";
 
-        if (label.startsWith(query) || query === "") {
-          (app as HTMLElement).style.display = "flex"; // keep layout
+        // Show all when input is empty, otherwise filter
+        if (query === "" || label.includes(query)) {
+          (app as HTMLElement).style.display = "flex";
         } else {
-          (app as HTMLElement).style.display = "none"; // hide unmatched
+          (app as HTMLElement).style.display = "none";
         }
       });
     });
+
+    // Reset the display when search is closed
+    const searchElement = document.getElementById("search");
+    const observer = new MutationObserver((mutations) => {
+      mutations.forEach((mutation) => {
+        if (mutation.attributeName === "class") {
+          const hasHideClass = (
+            mutation.target as HTMLElement
+          ).classList.contains("hide");
+          if (hasHideClass) {
+            // Reset all apps to visible when search closes
+            apps.forEach((app) => {
+              (app as HTMLElement).style.display = "flex";
+            });
+            // Clear the input
+            input.value = "";
+          }
+        }
+      });
+    });
+
+    if (searchElement) {
+      observer.observe(searchElement, { attributes: true });
+    }
   });
 </script>
-

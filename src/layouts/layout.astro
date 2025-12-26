@@ -6,15 +6,24 @@ import Nav from "../components/nav.astro";
 <html lang="en">
   <head>
     <meta charset="utf-8" />
-    <link href="https://api.fontshare.com/v2/css?f[]=array@400&display=swap" rel="stylesheet">
-    <link href="https://api.fontshare.com/v2/css?f[]=general-sans@200&display=swap" rel="stylesheet">
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=array@400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=general-sans@200&display=swap"
+      rel="stylesheet"
+    />
     <link rel="icon" type="image/svg+xml" href="/man.png" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <!-- Primary Meta Tags -->
     <title>{Astro.props.title}</title>
     <meta name="title" content="Full-stack Web Developer Portfolio" />
-    <meta name="description" content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria." />
+    <meta
+      name="description"
+      content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria."
+    />
     <meta
       name="keywords"
       content="Web Development, JavaScript, TypeScript, React, Frontend, Backend, Full-stack"
@@ -25,14 +34,23 @@ import Nav from "../components/nav.astro";
     <meta property="og:type" content="website" />
     <meta property="og:url" content="{Astro.props.url}" />
     <meta property="og:title" content="Full-stack Web Developer Portfolio" />
-    <meta property="og:description" content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria." />
+    <meta
+      property="og:description"
+      content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria."
+    />
     <meta property="og:image" content="{Astro.props.image}" />
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image" />
     <meta property="twitter:url" content="{Astro.props.url}" />
-    <meta property="twitter:title" content="Full-stack Web Developer Portfolio" />
-    <meta property="twitter:description" content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria." />
+    <meta
+      property="twitter:title"
+      content="Full-stack Web Developer Portfolio"
+    />
+    <meta
+      property="twitter:description"
+      content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria."
+    />
     <meta property="twitter:image" content="{Astro.props.image}" />
 
     <!-- Robots -->
@@ -40,8 +58,9 @@ import Nav from "../components/nav.astro";
     <meta name="theme-color" content="#0f172a" />
   </head>
   <body ontouchstart="" class="relative">
-    <div id="backdrop" class="backdrop z-20 hidden absolute w-full h-full"></div>
-    <Nav/>
+    <div id="backdrop" class="backdrop z-20 hidden absolute w-full h-full">
+    </div>
+    <Nav />
     <slot />
     <script src="../ts/script.ts"></script>
   </body>
