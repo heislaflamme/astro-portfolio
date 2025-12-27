@@ -65,6 +65,7 @@ import github from "../../public/github.svg";
         <div class="h-full flex flex-col align-middle w-[20%]">
           <Image
             src={projects}
+            loading = "eager"
             alt="icon"
             class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
           />
@@ -78,6 +79,7 @@ import github from "../../public/github.svg";
         <div class="h-full flex flex-col align-middle w-[20%]">
           <Image
             src={about}
+            loading = "eager"
             alt="icon"
             class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
           />
@@ -91,6 +93,7 @@ import github from "../../public/github.svg";
         <div class="h-full flex flex-col align-middle w-[20%]">
           <Image
             src={contact}
+            loading = "eager"
             alt="icon"
             class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
           />
@@ -104,6 +107,7 @@ import github from "../../public/github.svg";
         <div class="h-full flex flex-col align-middle w-[20%]">
           <Image
             src={skills}
+            loading = "eager"
             alt="icon"
             class="s-icons w-full p-8 h-[20%] m-auto max-lg:h-[30%] max-lg:w-[60%] max-lg:p-2"
           />
@@ -125,7 +129,7 @@ import github from "../../public/github.svg";
         <button
           class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
         >
-          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+          <Image src={exit} quality={10} class="w-4 m-auto" loading = "eager" alt="exit" />
         </button>
         <h1 class="relative left-1/2 -translate-x-full">SKILLS</h1>
       </div>
@@ -140,21 +144,21 @@ import github from "../../public/github.svg";
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={html} alt="html" class="skills_ w-[100px]" />
+          <Image src={html} alt="html" class="skills_ w-[100px]" loading = "eager"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">HTML5</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={css} alt="html" class="skills_ w-[100px]" />
+          <Image src={css} alt="html" class="skills_ w-[100px]" loading = "eager"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">CSS</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={tailwind} alt="html" class="skills_ w-[100px]" />
+          <Image src={tailwind} alt="html" class="skills_ w-[100px]" loading = "eager"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">
             TAILWIND
           </h1>
@@ -163,14 +167,14 @@ import github from "../../public/github.svg";
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={sass} alt="html" class="skills_ w-[100px]" />
+          <Image src={sass} alt="html" class="skills_ w-[100px]" loading = "eager"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">SASS</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={js} alt="html" class="skills_ w-[100px]" />
+          <Image src={js} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">
             JAVASCRIPT
           </h1>
@@ -179,7 +183,7 @@ import github from "../../public/github.svg";
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={ts} alt="html" class="skills_ w-[100px]" />
+          <Image src={ts} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">
             TYPESCRIPT
           </h1>
@@ -188,35 +192,35 @@ import github from "../../public/github.svg";
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={react} alt="html" class="skills_ react w-[100px]" />
+          <Image src={react} alt="html" class="skills_ react w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">REACT</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={astro} alt="html" class="skills_ w-[100px]" />
+          <Image src={astro} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">ASTRO</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={nodejs} alt="html" class="skills_ w-[100px]" />
+          <Image src={nodejs} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">NODEJS</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={sql} alt="html" class="skills_ w-[100px]" />
+          <Image src={sql} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">MYSQL</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={mongodb} alt="html" class="skills_ w-[100px]" />
+          <Image src={mongodb} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">
             MONGODB
           </h1>
@@ -225,7 +229,7 @@ import github from "../../public/github.svg";
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={express} alt="html" class="skills_ w-[100px]" />
+          <Image src={express} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">
             EXPRESSJS
           </h1>
@@ -234,7 +238,7 @@ import github from "../../public/github.svg";
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={nest} alt="html" class="skills_ w-[100px]" />
+          <Image src={nest} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] text-white">NESTJS</h1>
         </div>
       </div>
@@ -248,7 +252,7 @@ import github from "../../public/github.svg";
         <button
           class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
         >
-          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+          <Image src={exit} quality={10} class="w-4 m-auto" loading = "eager" alt="exit" />
         </button>
         <h1 class="relative left-1/2 -translate-x-full">PROJECTS</h1>
       </div>
@@ -256,7 +260,7 @@ import github from "../../public/github.svg";
       <hr />
 
       <div class="projects m-4 flex flex-col justify-center gap-4">
-        <a href="https://github.com/heislaflamme" class="h-[10%] flex justify-center gap-1"><p class="text-[18px] hover:text-white">Check out my Github</p><Image src={github} alt="project" class="rounded-2xl w-[4%]" /></a>
+        <a href="https://github.com/heislaflamme" class="h-[10%] flex justify-center gap-1"><p class="text-[18px] hover:text-white">Check out my Github</p><Image src={github} alt="project" class="rounded-2xl w-[4%]" loading = "eager"/></a>
         <div
           class="w-[100%] flex gap-4 drop-shadow-2xl shadow-black bg-white p-2 rounded-2xl"
         >
@@ -265,7 +269,7 @@ import github from "../../public/github.svg";
             class="w-[40%] rounded-2xl my-auto hover:scale-[1.7] z-20 hover:shadow-2xl hover:shadow-black transition-all duration-700 hover:translate-x-[40%] hover:translate-y-[20%]"
             target="_blank"
             rel="noopener noreferrer"
-            ><Image src={project1} alt="project" class="rounded-2xl" /></a
+            ><Image src={project1} alt="project" class="rounded-2xl" loading = "eager"/></a
           >
           <p class="my-auto text-[19px] font-black min-lg:text-[24px]">
             Basic portfolio site <br />
@@ -288,7 +292,7 @@ import github from "../../public/github.svg";
         <button
           class="exit max-lg:active:bg-red-600 hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
         >
-          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+          <Image src={exit} quality={10} class="w-4 m-auto" loading = "eager" alt="exit" />
         </button>
         <h1 class="relative left-1/2 -translate-x-full">ABOUT</h1>
       </div>
@@ -299,7 +303,7 @@ import github from "../../public/github.svg";
         <div
           class="p-2 flex m-auto rounded-2xl w-[60%] max-lg:w-[95%] bg-gray-900"
         >
-          <Image src={me} alt="me" class="w-20 rounded-full bg-black" />
+          <Image src={me} alt="me" class="w-20 rounded-full bg-black" loading = "eager"/>
           <p class="text-white m-auto">CHIDUBEM PAUL EMEKA-OGBU</p>
         </div>
 
@@ -327,7 +331,7 @@ import github from "../../public/github.svg";
         <button
           class="exit hover:border-[1px] hover:border-black max-lg:active:border-[1px] max-lg:active:border-black max-lg:active:bg-red-600 hover:bg-red-600 mb-[4px] w-7 h-7 relative left-full -translate-x-full rounded-full"
         >
-          <Image src={exit} quality={10} class="w-4 m-auto" alt="exit" />
+          <Image src={exit} quality={10} class="w-4 m-auto" loading = "eager" alt="exit" />
         </button>
         <h1 class="relative left-1/2 -translate-x-full">CONTACT</h1>
       </div>
@@ -341,31 +345,31 @@ import github from "../../public/github.svg";
           href="https://t.me/heislaflame"
           class="media w-[15%] min-lg:w-[10%]"
           target="_blank"
-          rel="noopener noreferrer"><Image src={telegram} alt="social" /></a
+          rel="noopener noreferrer"><Image src={telegram} alt="social" loading = "eager" /></a
         >
         <a
           href="https://x.com/heislaflame?s=11&t=jyaIwNJe-T53So5zipuPRA"
           class="media w-[15%] min-lg:w-[10%]"
           target="_blank"
-          rel="noopener noreferrer"><Image src={x} alt="social" /></a
+          rel="noopener noreferrer"><Image src={x} alt="social" loading = "eager" /></a
         >
         <a
           href="https://www.linkedin.com/in/emekaogbuchidubem?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"
           class="media w-[15%] min-lg:w-[10%]"
           target="_blank"
-          rel="noopener noreferrer"><Image src={linkedin} alt="social" /></a
+          rel="noopener noreferrer"><Image src={linkedin} alt="social" loading = "eager" /></a
         >
         <a
           href="mailto:emekaogbuchidubem@gmail.com"
           class="media w-[15%] min-lg:w-[10%]"
           target="_blank"
-          rel="noopener noreferrer"><Image src={gmail} alt="social" /></a
+          rel="noopener noreferrer"><Image src={gmail} alt="social" loading = "eager" /></a
         >
         <a
           href="https://www.instagram.com/heislaflame?igsh=MWh1NWUzOWxnMWRndg%3D%3D&utm_source=qr"
           class="media w-[15%] min-lg:w-[10%]"
           target="_blank"
-          rel="noopener noreferrer"><Image src={instagram} alt="social" /></a
+          rel="noopener noreferrer"><Image src={instagram} alt="social" loading = "eager" /></a
         >
       </div>
       <div
