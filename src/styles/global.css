@@ -91,13 +91,13 @@ button {
   cursor: pointer;
 }
 .backdrop {
-  background-color: rgba(0, 0, 0, 0.932);
+  background-color: rgba(0, 0, 0, 0.61);
 }
 hr{
   border-color: rgb(60, 60, 59);
 }
 .app{
-  background-color: rgba(26, 26, 24, 0.897);
+  background-color: rgb(26, 26, 24);
 }
 .nudge::before {
   content: "";
