@@ -96,9 +96,7 @@ button {
 hr{
   border-color: rgb(60, 60, 59);
 }
-.app{
-  background-color: rgb(26, 26, 24);
-}
+
 .nudge::before {
   content: "";
   background-color: rgb(24, 24, 24);
@@ -205,5 +203,6 @@ hr{
   }
   .app{
     border-color: #131312;
+    background-color: rgb(26, 26, 24);
   }
 }
