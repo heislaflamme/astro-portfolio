@@ -71,6 +71,9 @@ nav {
 button {
   cursor: pointer;
 }
+.app {
+   transition: opacity 200ms ease;
+}
 .win-search:hover {
   background-color: rgb(52, 52, 51);
 }
@@ -91,6 +94,7 @@ button {
   cursor: pointer;
 }
 .backdrop{
+     transition: opacity 200ms ease;
     background: transparent;
     z-index: 20;
   }

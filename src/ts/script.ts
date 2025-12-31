@@ -15,6 +15,9 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById(`app${i}`)?.classList.add("hide");
       icon.classList.remove("bg");
     });
+
+    syncBackdropWithState();
+
   }
 
   //exit button
@@ -97,6 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
         } else {
           icon.classList.remove("bg");
         }
+
+        syncBackdropWithState();
+
       });
 
       document.addEventListener("click", (e) => {
@@ -131,6 +137,8 @@ document.addEventListener("DOMContentLoaded", () => {
           backdrop?.classList.add("hidden");
           closeAll();
         }
+        syncBackdropWithState();
+
       });
 
       document.addEventListener("click", (e) => {
@@ -189,6 +197,26 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+  
+const isMobile = window.matchMedia("(max-width: 1023px)");
+
+function syncBackdropWithState() {
+  const anyAppOpen = [...document.querySelectorAll(".app")]
+    .some(app => !app.classList.contains("hide"));
+
+  if (isMobile.matches && anyAppOpen) {
+    backdrop?.classList.remove("hidden");
+  } else {
+    backdrop?.classList.add("hidden");
+  }
+}
+
+// run once
+syncBackdropWithState();
+
+// run whenever screen size changes
+isMobile.addEventListener("change", syncBackdropWithState);
+
 
   search?.addEventListener("click", (e) => {
     e.stopPropagation();
