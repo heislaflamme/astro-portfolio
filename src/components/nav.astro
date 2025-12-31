@@ -13,16 +13,17 @@ import cellular from "../../public/cellular-svgrepo-com.svg";
 import power from "../../public/charging.png";
 ---
 
-<!-- ios top bar -->
-<div class="top-bar flex relative min-lg:hidden z-20">
-  <!-- ios nudge -->
+<!-- ios nudge -->
   <div
-    class="nudge relative top-0 bg-black h-[4dvh] rounded-b-2xl w-[30dvw] m-auto"
+    class="nudge relative top-0 z-20 bg-black h-[4dvh] rounded-b-2xl w-[30dvw] m-auto"
   >
   </div>
+<!-- ios top bar -->
+<div class="top-bar flex relative min-lg:hidden z-[19]">
+  
   <!--ios time -->
   <div
-    class="absolute top-0 left-0 ml-[8dvw] mt-[1dvw] text-white w-[15dvw] text-[0.8rem]"
+    class="absolute bottom-0 left-0 ml-[8dvw] mt-[1dvw] text-white w-[15dvw] text-[0.8rem]"
   >
     {
       new Date().toLocaleTimeString("en-US", {
@@ -34,7 +35,7 @@ import power from "../../public/charging.png";
   </div>
   <!--cellular and battery -->
   <div
-    class="flex absolute gap-1 mr-[8dvw] mt-[1dvw] top-0 right-0 w-[15dvw] text-[0.8rem]"
+    class="flex absolute gap-1 mr-[8dvw] mt-[1dvw] bottom-0 right-0 w-[15dvw] text-[0.8rem]"
   >
     <Image
       src={cellular}
@@ -43,7 +44,7 @@ import power from "../../public/charging.png";
       alt="cellular"
       class="ml-2"
     />
-    <p class="text-white">LTE</p>
+    <p class="text-white font-extrabold">LTE</p>
     <Image
       src={power}
       loading="eager"
