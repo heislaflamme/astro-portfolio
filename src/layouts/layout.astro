@@ -7,7 +7,6 @@ const {
   url = "https://chidubem.name.ng",
   image = "https://chidubem.name.ng/project2.png",
 } = Astro.props;
-
 ---
 
 <html lang="en">
@@ -48,17 +47,15 @@ const {
     <meta property="og:image" content={image} />
 
     <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta property="twitter:url" content={url} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
     <meta
-      property="twitter:title"
-      content="Full-stack Web Developer Portfolio"
-    />
-    <meta
-      property="twitter:description"
+      name="twitter:description"
       content="Hi, I'm a Full-stack Web Developer based in Lagos, Nigeria."
     />
-    <meta property="twitter:image" content={image} />
+    <meta name="twitter:image" content={image} />
+    <meta name="twitter:site" content="@heislaflame" />
+    <meta name="twitter:creator" content="@heislaflame" />
 
     <!-- Robots -->
     <meta name="robots" content="index, follow" />
