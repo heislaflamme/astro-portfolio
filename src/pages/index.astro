@@ -14,11 +14,9 @@ import js from "../../public/js-official-svgrepo-com.svg";
 import ts from "../../public/typescript-icon-svgrepo-com.svg";
 import react from "../../public/react-svgrepo-com.svg";
 import astro from "../../public/astro.svg";
-import express from "../../public/express-svgrepo-com.svg";
-import nest from "../../public/nestjs-svgrepo-com.svg";
-import sql from "../../public/mysql-logo-svgrepo-com.svg";
-import mongodb from "../../public/mongodb-logo-svgrepo-com.svg";
-import nodejs from "../../public/nodejs-svgrepo-com.svg";
+import sql from "../../public/elephant.png";
+import supabase from "../../public/supabase.svg";
+import tanstack from "../../public/tanstack.svg";
 import me from "../../public/me.webp";
 import telegram from "../../public/telegram.svg";
 import x from "../../public/twitter.svg";
@@ -33,18 +31,18 @@ import github from "../../public/github.svg";
   <!--hero -->
   <div class="flex relative flex-col h-[92dvh] max-lg:h-[80dvh]">
     <header
-      class="hero-header hover:scale-[1.05] transition-all duration-500 mt-[15dvh] lg:text-[150px] md:text-[100px] max-sm:text-[50px] text-center whitespace-normal break-words"
+      class="hero-header hover:scale-[1.05] transition-all duration-500 mt-[15dvh] lg:text-[150px] md:text-[100px] text-[50px] text-center whitespace-normal break-words"
     >
       Hi, I'm Chidubem
     </header>
     <p
-      class="hero-p1 text-center hover:scale-[1.05] transition-all duration-500 lg:text-[25px] md:text-[20px] max-sm:text-[15px] whitespace-normal break-words"
+      class="hero-p1 text-center hover:scale-[1.05] transition-all duration-500 lg:text-[25px] md:text-[20px] text-[15px] whitespace-normal break-words"
     >
       A Freelance Full-Stack Web Developer
     </p>
     <br />
     <p
-      class="hero-p2 hover:scale-[1.05] transition-all duration-500 text-center lg:text-[25px] md:text-[20px] max-sm:text-[15px] whitespace-normal break-words"
+      class="hero-p2 hover:scale-[1.05] transition-all duration-500 text-center lg:text-[25px] md:text-[20px] text-[15px] whitespace-normal break-words"
     >
       I turn your ideas into modern, production ready SEO-optimized web
       applications.
@@ -138,7 +136,7 @@ import github from "../../public/github.svg";
       <p class="p-4 text-white font-bold">
         This website was made using Astro to ensure fast load times, better SEO
         and faster developer experience. <br />
-        <br /> Here are my other skills;
+        <br /> Here is my tech stack;
       </p>
       <div class="skills_grid overflow-auto h-[70%] relative left-1/2 -translate-x-1/2 p-4 rounded-2xl">
         <div
@@ -206,40 +204,24 @@ import github from "../../public/github.svg";
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={nodejs} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
-          <h1 class="relative top-1/2 -translate-y-[10%] font-extrabold text-white">NODEJS</h1>
+          <Image src={tanstack} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
+          <h1 class="relative top-1/2 -translate-y-[10%] font-extrabold text-white">TANSTACK START</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
           <Image src={sql} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
-          <h1 class="relative top-1/2 -translate-y-[10%] font-extrabold text-white">MYSQL</h1>
+          <h1 class="relative top-1/2 -translate-y-[10%] font-extrabold text-white">POSTGRES</h1>
         </div>
 
         <div
           class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
         >
-          <Image src={mongodb} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
+          <Image src={supabase} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
           <h1 class="relative top-1/2 -translate-y-[10%] font-extrabold text-white">
-            MONGODB
+            SUPABASE
           </h1>
-        </div>
-
-        <div
-          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
-        >
-          <Image src={express} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
-          <h1 class="relative top-1/2 -translate-y-[10%] font-extrabold text-white">
-            EXPRESSJS
-          </h1>
-        </div>
-
-        <div
-          class="flex shadow-2xl shadow-black justify-center hover:scale-[1.02] gap-3 transition-all duration-500 m-7 bg-black p-10 rounded-2xl"
-        >
-          <Image src={nest} alt="html" class="skills_ w-[100px]" loading = "lazy"/>
-          <h1 class="relative top-1/2 -translate-y-[10%] font-extrabold text-white">NESTJS</h1>
         </div>
       </div>
     </div>
@@ -307,7 +289,7 @@ import github from "../../public/github.svg";
           class="p-2 flex m-auto rounded-2xl w-[60%] max-lg:w-[95%] bg-gray-950"
         >
           <Image src={me} alt="me" class="w-20 rounded-full bg-white" loading = "eager"/>
-          <p class="text-white max-lg:pl-[2px] m-auto font-bold">CHIDUBEM PAUL OGBU</p>
+          <p class="text-white ml-4 text-center my-auto font-bold">CHIDUBEM PAUL OGBU</p>
         </div>
 
         <div
@@ -316,9 +298,8 @@ import github from "../../public/github.svg";
           <p class="text-white font-bold m-auto p-2">
             I build clean, fast, responsive and SEO-optimized websites, my tech
             stack includes the latest technologies such as HTML, CSS, Tailwind,
-            SASS, JavaScript, TypeScript, React, Astro, ExpressJS, NestJS, SQL
-            and NOSQL. My website was especially made using Astro, paired with
-            tailwind, css and TypeScript. I am confident in my stack and I use
+            SASS, JavaScript, TypeScript, React, Astro, Tanstack Start and Supabase. My website was especially made using Astro, paired with
+            tailwind, CSS and TypeScript. I am confident in my stack and I use
             it well. Available for freelance, remote, or on-site web development
             roles.
           </p>
@@ -375,17 +356,7 @@ import github from "../../public/github.svg";
           rel="noopener noreferrer"><Image src={instagram} alt="social" loading = "eager" /><p class="font-black relative left-1/2 text-[15px] min-lg:hidden m-auto">Instagram</p></a
         >
       </div>
-      <div
-        class="contra-hire-me-button flex justify-center mt-2"
-        data-analyticsUserId="c88cfc24-7ef4-45b9-b8ac-df85bb094d65"
-        data-theme="light"
-        data-username="emeka_chidubem_i7fb5yis"
-      >
-      </div><script
-        async
-        src="https://contra.com/static/embed/sdk.js"
-        charset="utf-8"></script>
-    </div>
+     
   </div>
 </Layout>
 
